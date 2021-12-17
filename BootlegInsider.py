@@ -1,9 +1,16 @@
 from typing import Text
 import requests
 from bs4 import BeautifulSoup
-import pandas as pd
+import os
+Foldername = input('This is the album title: ')
+File = os.mkdir(Foldername)
+Curr_Directory = os.getcwd()+'/'+ Foldername
+os.chdir(Curr_Directory)
+print(Curr_Directory)
 #This is supoosed to be the url given from the user 
 url = str(input('Please Enter In A Valid Khinsider Album Url: ')).replace(' ','')
+#This is supposed to be the new folder
+
 req = requests.get(url.format(1))
 Base_Url='https://downloads.khinsider.com'
 def dLink(Url, Name):
@@ -18,17 +25,18 @@ def dLink(Url, Name):
         for chunk in req.iter_content(chunk_size=1000):
             if chunk:
                 file.write(chunk)
-    
 #^^^^^^^^^^^^^^^^^^^This is the download function
 #with open(lol,'r') as r:
 soup = BeautifulSoup(req.text, 'lxml')
 #print(soup)
 # NOW AFTER A WHOLE WEEK FINALLY, This Url will store each link to the download page
 Lame_Counter =0
+Limit = 3
 #Got to make this since I can't find just one tage with just ONE ELEMENT just stupid man
 Urls={}
 for td in soup.find_all('td', class_="clickable-row"):
     #Ok this kinda means at least to my small brain, that beautiful soup parse throguh the html and stores each eleemnt and attribute as a dict I think I'm not too sure
+    
     if Lame_Counter < 1:
         Urls[td.getText()] = td.find("a")['href']
     Lame_Counter +=1
