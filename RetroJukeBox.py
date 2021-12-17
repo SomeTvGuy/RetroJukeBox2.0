@@ -60,15 +60,3 @@ for Track in Tracklist:
     req2 = requests.get(Tracklist[Track].format(1))
     sort = BeautifulSoup(req2.text, 'lxml').find('audio')['src']
     dLink(sort,Track+'.mp3')
-#This will be for the album art
-#sort3= BeautifulSoup(req.text, 'lxml').find('img', attrs={'border':'0'})['src']
-#print(sort3)
-#This will be the Album Title 
-sort4= BeautifulSoup(req.text, 'lxml').find_all('b')
-for links in sort4:
-    if Lame_Counter ==1:
-        AlbumName= links.get_text()
-        break
-    Lame_Counter +=1
-#dLink(sort3,AlbumName+'.png')
-#This could be run if you want the album art, check if the website has it, some songs just don't have artwork along with it
