@@ -36,7 +36,7 @@ Urls={}
 for td in soup.find_all('td', class_="clickable-row"):
     #Ok this kinda means at least to my small brain, that beautiful soup parse throguh the html and stores each eleemnt and attribute as a dict I think I'm not too sure
     Current_El = td.getText()
-#Essentially, this is a regex that takes ALL the TIMESTAMPS AND FIlESIZES with the string 'Lol', if the pattern is present and equal slol, it skips the if statement and loops again until the pattern is not there 
+#Essentially, this is a regex that takes ALL numers with just the pattern of a TIMESTAMP or a FIlESIZE with the string 'Lol', if the pattern is present and the substring that it's replaced with is equal to lol, it skips the if statement and loops again until the pattern is not there 
     if (re.sub(r'\d{1}:\d{2}','Lol',Current_El) == 'Lol') or (re.sub(r'\d{1}.\d{2} MB','Lol',Current_El)== 'Lol'):
         pass
     else:
