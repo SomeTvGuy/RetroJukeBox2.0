@@ -2,13 +2,14 @@ from typing import Text
 import requests
 from bs4 import BeautifulSoup
 import os
+import re
+
+#This is supoosed to be the url given from the user 
+url = str(input('Please Enter In A Valid Khinsider Album Url: ')).replace(' ','')
 Foldername = input('This is the album title: ')
 File = os.mkdir(Foldername)
 Curr_Directory = os.getcwd()+'/'+ Foldername
 os.chdir(Curr_Directory)
-print(Curr_Directory)
-#This is supoosed to be the url given from the user 
-url = str(input('Please Enter In A Valid Khinsider Album Url: ')).replace(' ','')
 #This is supposed to be the new folder
 
 req = requests.get(url.format(1))
@@ -30,18 +31,16 @@ def dLink(Url, Name):
 soup = BeautifulSoup(req.text, 'lxml')
 #print(soup)
 # NOW AFTER A WHOLE WEEK FINALLY, This Url will store each link to the download page
-Lame_Counter =0
-Limit = 3
 #Got to make this since I can't find just one tage with just ONE ELEMENT just stupid man
 Urls={}
 for td in soup.find_all('td', class_="clickable-row"):
     #Ok this kinda means at least to my small brain, that beautiful soup parse throguh the html and stores each eleemnt and attribute as a dict I think I'm not too sure
-    
-    if Lame_Counter < 1:
+    Current_El = td.getText()
+#Essentially, this is a regex that takes ALL the TIMESTAMPS AND FIlESIZES with the string 'Lol', if the pattern is present and equal slol, it skips the if statement and loops again until the pattern is not there 
+    if (re.sub(r'\d{1}:\d{2}','Lol',Current_El) == 'Lol') or (re.sub(r'\d{1}.\d{2} MB','Lol',Current_El)== 'Lol'):
+        pass
+    else:
         Urls[td.getText()] = td.find("a")['href']
-    Lame_Counter +=1
-    if Lame_Counter == 3:
-        Lame_Counter = 0
 #Ok the use of "Lame Counter" was becasue of my lack of knwoledge ofn the subejct of ebautiful soup, it became frustring so i went tow at I knew, and I used a coutner to 
 # count the elements I wanted to get, I tested it out on multiple urls to ensure that this wasn't a fluke
 Page2 = []
