@@ -18,7 +18,7 @@ The requests module used within this project is used in order to send "GET" requ
 
 -There will be a message in the terminal window saying 'Please Enter In A Valid Khinsider Album Url: ', copy and paste a URL from the website, and press enter
 
--You'll be asked to Provide an Album name, this is the name of the Folder that your tracks will be held in. I'd recommend storing it as the name of the videogame or maybe something unique to prevent any errors 
+-You'll be asked to provide an album name, **this is the name of the Folder that your tracks will be held in**. I'd recommend storing it as the name of the videogame or maybe something unique to prevent any errors 
 
 # |References|
 Raw String to HTML
