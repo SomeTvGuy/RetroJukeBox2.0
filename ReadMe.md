@@ -3,7 +3,7 @@ A simple Music Downloader for Kinder
 Roughly inspired by the same kind of project by [@obskyr](https://github.com/obskyr/khinsider)
 
 # NOTE
-**You need requests and beautiful soup in order to make this script work**  this was also made in Python so please ensure that you have that installed too
+<u>**You need requests and beautiful soup in order to make this script work**</u>  this was also made in Python so please ensure that you have that installed too
 To install requests, all you need to do is open cmd or whatever the equivalent of terminal si for your OS and put in the following command:
 "Pip install requests"
 "Python -m pip install requests
@@ -23,7 +23,7 @@ The requests module used within this project is used in order to send "GET" requ
 
 -There will be a message in the terminal window saying 'Please Enter In A Valid Khinsider Album Url: ', copy and paste a URL from the website, and press enter
 
--You'll be asked to provide an album name,**this is the name of the Folder that your tracks will be held in**. I'd recommend storing it as the name of the videogame or maybe something unique to prevent any errors from going on
+-You'll be asked to provide an album name,<u>**this is the name of the Folder that your tracks will be held in**</u>. I'd recommend storing it as the name of the videogame or maybe something unique to prevent any errors from going on
 
 
 # References
