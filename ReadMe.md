@@ -12,9 +12,12 @@ You May also need to install Beautiful Soup 4 as well, using a similar command a
 This is essentially just a web scraper built to download files one by one from the KhInsider website. The goal of this project was to successfully bypass the paywall downloading videogame soundtracks as an album, as their main gimmick behind running their site is donating to them to mass download whole albums. While I don't know too much about who owns the licensing on the website, it is true that anyone can download each song individually for free without paying them a dime. 
 The requests module used within this project is used in order to send "GET" requests to sort through the pages HTML, find the URL attached to each track's name, and then download each file to parse the urn that the user provides.
 # |How To Run|
--Ensure that you have both the BeatifulSoup and the Requests Library installed on your machine. This goes without saying, but also make sure you have the Latest Version of Python installed on your machine as well
+-Ensure that you have both the BeatifulSoup and the Requests library installed on your machine. This goes without saying, but also make sure you have the Latest Version of Python installed on your machine as well
+
 -Open the 'RetroJukeBox.py' file in your favorite IDE, and run the file!
+
 -There will be a message in the terminal window saying 'Please Enter In A Valid Khinsider Album Url: ', copy and paste a URL from the website, and press enter
+
 -You'll be asked to Provide an Album name, this is the name of the Folder that your tracks will be held in. I'd recommend storing it as the name of the videogame or maybe something unique to prevent any errors 
 
 # |References|
