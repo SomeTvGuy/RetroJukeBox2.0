@@ -1,6 +1,6 @@
 # Retro-Jukebox
 A simple Music Downloader for Kinder
-Roughly inspired by the same kind of project by @obskyr
+Roughly inspired by the same kind of project by [@obskyr](https://github.com/obskyr/khinsider)
 
 # NOTE
 **You need requests and beautiful soup in order to make this script work**  this was also made in Python so please ensure that you have that installed too
