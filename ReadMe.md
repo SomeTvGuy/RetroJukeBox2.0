@@ -4,9 +4,12 @@ Roughly inspired by the same kind of project by [@obskyr](https://github.com/obs
 
 # NOTE
 <u>**You need requests and beautiful soup in order to make this script work**</u>  this was also made in Python so please ensure that you have that installed too
-To install requests, all you need to do is open cmd or whatever the equivalent of terminal si for your OS and put in the following command:
+To install requests, all you need to do is open cmd or whatever the equivalent of terminal is for your OS and put in the following command:
+
 "Pip install requests"
-"Python -m pip install requests
+
+"Python -m pip install requests"
+
 You May also need to install Beautiful Soup 4 as well, using a similar command as well, I'll link the documentation below just in case you have any difficulty
 
 # Brief Background
