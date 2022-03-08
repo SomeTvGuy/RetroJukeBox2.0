@@ -1,5 +1,5 @@
 # Retro-Jukebox
-A simple Music Downloader for Kinder
+A simple Music Downloader for KHinsider
 Roughly inspired by the same kind of project by [@obskyr](https://github.com/obskyr/khinsider)
 
 # NOTE
